@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MessageSquare, Send, Clock, User, Calendar, Briefcase, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Send, Clock, User, Calendar, Briefcase, CheckCircle, MapPin, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,6 +61,25 @@ const Contact = () => {
       value: "Monday - Friday, 9AM - 6PM",
       action: "Book Meeting",
       link: "#"
+    }
+  ];
+
+  const leadership = [
+    {
+      role: "Founder",
+      name: "Tanvra Software Solutions",
+      email: "kishor@tanvra.in",
+      phone: "+91-8309898737",
+      linkedin: "https://www.linkedin.com/in/kishorpinninti/",
+      location: "Hyderabad, India"
+    },
+    {
+      role: "Director",
+      name: "Tanvra Software Solutions",
+      email: "dipika@tanvra.in",
+      phone: "+91-7032145690",
+      linkedin: "https://www.linkedin.com/in/dipika-p-6508a737a/",
+      location: "Hyderabad, India"
     }
   ];
 
@@ -227,47 +246,83 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information - Restructured to take less vertical space */}
+          {/* Contact Information */}
           <div className="space-y-8">
-            {/* Contact Cards */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-[#FFC023] flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+            {/* Leadership Contacts */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-lg">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-lg bg-[#003366] flex items-center justify-center">
+                  <User className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Direct Contact</h3>
-                  <p className="text-gray-600">Multiple ways to reach our team</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Direct Leadership Contact</h3>
+                  <p className="text-gray-600">Connect directly with our leadership team</p>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                {contactInfo.map((item, index) => (
+              <div className="space-y-6">
+                {leadership.map((person, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-all duration-300 border border-transparent hover:border-gray-300"
+                    className="group bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-all duration-300 border border-transparent hover:border-gray-300"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#003366]/10 flex items-center justify-center group-hover:bg-[#003366]/20 transition-colors">
-                        <div className="text-[#003366]">
-                          {item.icon}
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-5">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#003366] to-[#004080] flex items-center justify-center text-white font-bold text-lg">
+                          {person.role.charAt(0)}
                         </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-lg font-bold text-gray-900 mb-1">{item.title}</h4>
-                        <p className="text-gray-600 text-sm mb-2">{item.description}</p>
-                        <div className="text-gray-900 font-medium text-sm">{item.value}</div>
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-[#003366] font-semibold text-xs mt-2 hover:text-[#003366]/80 group/link"
-                        >
-                          {item.action}
-                          <svg className="w-3 h-3 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                          </svg>
-                        </a>
+                      
+                      <div className="flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-3">
+                          <div>
+                            <h4 className="text-lg font-bold text-gray-900 mb-1">{person.role}</h4>
+                            <p className="text-gray-700 font-medium">{person.name}</p>
+                          </div>
+                          <span className="inline-flex items-center text-sm text-gray-600 mt-1 sm:mt-0">
+                            <MapPin className="w-4 h-4 mr-1" />
+                            {person.location}
+                          </span>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                          <div>
+                            <p className="text-sm text-gray-600 mb-1">Email</p>
+                            <a 
+                              href={`mailto:${person.email}`}
+                              className="text-[#003366] font-medium hover:text-[#003366]/80 transition-colors text-sm flex items-center gap-1"
+                            >
+                              <Mail className="w-4 h-4" />
+                              {person.email}
+                            </a>
+                          </div>
+                          <div>
+                            <p className="text-sm text-gray-600 mb-1">Phone</p>
+                            <a 
+                              href={`tel:${person.phone}`}
+                              className="text-[#003366] font-medium hover:text-[#003366]/80 transition-colors text-sm flex items-center gap-1"
+                            >
+                              <Phone className="w-4 h-4" />
+                              {person.phone}
+                            </a>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <p className="text-sm text-gray-600 mb-1">LinkedIn</p>
+                          <a 
+                            href={person.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-[#003366] font-medium hover:text-[#003366]/80 transition-colors text-sm group/link"
+                          >
+                            <Linkedin className="w-4 h-4 mr-2" />
+                            Connect on LinkedIn
+                            <svg className="w-3 h-3 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -284,7 +339,8 @@ const Contact = () => {
                   {[
                     "18+ years of technology recruitment experience",
                     "Specialized expertise in emerging technologies",
-                    "Direct connections with leading technology companies"
+                    "Direct connections with leading technology companies",
+                    "Founder-led engagement for strategic partnerships"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-[#003366] flex-shrink-0 mr-3 mt-0.5" />
@@ -298,20 +354,20 @@ const Contact = () => {
               <div className="bg-[#003366] rounded-xl p-6 text-white">
                 <h4 className="text-xl font-bold mb-3">Ready to Accelerate Your Recruitment?</h4>
                 <p className="text-gray-300 mb-4 text-sm">
-                  Connect with our experts for a confidential discussion about your talent strategy
+                  Connect with our leadership team for a confidential discussion about your talent strategy
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="#"
+                    href="mailto:contact@tanvara.com"
                     className="px-4 py-3 bg-[#FFC023] text-[#003366] font-semibold rounded-lg hover:bg-[#FFC023]/90 hover:scale-105 transition-all duration-300 text-center text-sm"
                   >
                     Schedule Consultation
                   </a>
                   <a
-                    href="#"
+                    href="tel:+12345678900"
                     className="px-4 py-3 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 text-center text-sm"
                   >
-                    Download Brochure
+                    Call Now
                   </a>
                 </div>
               </div>

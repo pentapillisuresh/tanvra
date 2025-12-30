@@ -5,27 +5,30 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Expertise', href: '#expertise' },
-    { name: 'Insights', href: '#insights' },
-    { name: 'Opportunities', href: '#opportunities' },
+   
+    { name: 'Career', href: '#career' },
     { name: 'Contact', href: '#contact' }
   ];
 
   const technologyAreas = [
+      'InsurTech',
     'Artificial Intelligence',
+    'Cybersecurity',
+   
+     'Blockchain',
     'Quantum Computing',
-    'Blockchain',
+   
   
   
-    'InsurTech',
+  
     
   ];
 
   const contactInfo = [
     {
       icon: <Mail className="w-4 h-4" />,
-      text: 'contact@professional.com',
-      href: 'mailto:contact@professional.com'
+      text: 'kishor@tanvra.in',
+      href: 'mailto:kishor@tanvra.in'
     },
     {
       icon: <Phone className="w-4 h-4" />,
@@ -116,7 +119,7 @@ const Footer = () => {
             <div className="mt-8 pt-8 border-t border-white/10">
               <h4 className="text-sm font-medium mb-4 text-gray-300">Connect Professionally</h4>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/kishorpinninti/"
                 className="inline-flex items-center px-4 py-2 bg-[#FFC023] text-[#003366] font-semibold rounded-lg hover:bg-[#FFC023]/90 transition-all duration-300 group/linkedin"
               >
                 <Linkedin className="w-5 h-5 mr-2" />

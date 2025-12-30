@@ -16,19 +16,18 @@ const FeaturedOpportunities = () => {
 
   const opportunities = [
     {
-      id: 1,
-      title: "Senior Quantum Software Engineer",
-      company: "QuantumTech Solutions",
-      location: "Bangalore, India",
-      salary: "₹25L - ₹35L",
+      id: 4,
+      title: "InsurTech Data Scientist",
+      company: "InsuranceTech Corp",
+      location: "Mumbai, India",
+      salary: "₹22L - ₹32L",
       type: "Full-time",
       featured: true,
-      category: "Quantum Computing",
-      logo: "⚛️",
-      skills: ["Python", "Qiskit", "Quantum Algorithms"],
-      rating: 4.8,
-      urgency: "High",
-      posted: "2 days ago"
+      category: "InsurTech",
+      logo: "📊",
+      skills: ["Python", "SQL", "Machine Learning"],
+      rating: 4.6,
+      posted: "3 days ago"
     },
     {
       id: 2,
@@ -38,11 +37,24 @@ const FeaturedOpportunities = () => {
       salary: "₹30L - ₹45L",
       type: "Full-time",
       featured: true,
-      category: "Artificial Intelligence",
+      category: "AI",
       logo: "🤖",
       skills: ["PyTorch", "TensorFlow", "MLOps"],
       rating: 4.9,
-      urgency: "High",
+      posted: "1 day ago"
+    },
+    {
+      id: 5,
+      title: "Cybersecurity Architect",
+      company: "SecureNet Systems",
+      location: "Delhi, India",
+      salary: "₹28L - ₹40L",
+      type: "Full-time",
+      featured: true,
+      category: "Cybersecurity",
+      logo: "🛡️",
+      skills: ["Cloud Security", "Threat Analysis", "GRC"],
+      rating: 4.8,
       posted: "1 day ago"
     },
     {
@@ -57,56 +69,55 @@ const FeaturedOpportunities = () => {
       logo: "⛓️",
       skills: ["Solidity", "Web3", "Smart Contracts"],
       rating: 4.7,
-      urgency: "Medium",
       posted: "1 week ago"
     },
     {
-      id: 4,
-      title: "InsurTech Data Scientist",
-      company: "InsuranceTech Corp",
-      location: "Mumbai, India",
-      salary: "₹22L - ₹32L",
+      id: 1,
+      title: "Senior Quantum Software Engineer",
+      company: "QuantumTech Solutions",
+      location: "Bangalore, India",
+      salary: "₹25L - ₹35L",
       type: "Full-time",
       featured: true,
-      category: "InsurTech",
-      logo: "📊",
-      skills: ["Python", "SQL", "Machine Learning"],
-      rating: 4.6,
-      urgency: "High",
-      posted: "3 days ago"
+      category: "Quantum",
+      logo: "⚛️",
+      skills: ["Python", "Qiskit", "Quantum Algorithms"],
+      rating: 4.8,
+      posted: "2 days ago"
     }
   ];
 
   const categories = [
-    { name: 'All', count: 12 },
-    { name: 'Quantum Computing', count: 3 },
-    { name: 'Artificial Intelligence', count: 5 },
-    { name: 'Blockchain', count: 4 },
-    { name: 'InsurTech', count: 3 }
+    { name: 'All', count: opportunities.length },
+    { name: 'InsurTech', count: opportunities.filter(job => job.category === 'InsurTech').length },
+    { name: 'AI', count: opportunities.filter(job => job.category === 'AI').length },
+    { name: 'Cybersecurity', count: opportunities.filter(job => job.category === 'Cybersecurity').length },
+    { name: 'Blockchain', count: opportunities.filter(job => job.category === 'Blockchain').length },
+    { name: 'Quantum', count: opportunities.filter(job => job.category === 'Quantum').length }
   ];
 
   const stats = [
     { icon: <Users className="w-6 h-6" />, value: "1,200+", label: "Active Positions", color: "bg-[#FFC023]/20 text-[#FFC023]" },
     { icon: <Building className="w-6 h-6" />, value: "250+", label: "Indian Companies", color: "bg-[#003366]/20 text-[#003366]" },
-    { icon: <Award className="w-6 h-6" />, value: "8K+", label: "Successful Placements", color: "bg-[#FFC023]/20 text-[#FFC023]" },
-    { icon: <TrendingUp className="w-6 h-6" />, value: "92%", label: "Success Rate", color: "bg-[#003366]/20 text-[#003366]" }
+    { icon: <Award className="w-6 h-6" />, value: "500+", label: "Successful Placements", color: "bg-[#FFC023]/20 text-[#FFC023]" },
+    { icon: <TrendingUp className="w-6 h-6" />, value: "98%", label: "Success Rate", color: "bg-[#003366]/20 text-[#003366]" }
   ];
 
-  const urgencyColors = {
-    "High": "bg-red-100 text-red-700",
-    "Medium": "bg-yellow-100 text-yellow-700",
-    "Low": "bg-green-100 text-green-700"
+  const categoryColors = {
+    "InsurTech": "bg-blue-100 text-blue-700",
+    "AI": "bg-green-100 text-green-700",
+    "Cybersecurity": "bg-red-100 text-red-700",
+    "Blockchain": "bg-amber-100 text-amber-700",
+    "Quantum": "bg-purple-100 text-purple-700"
   };
 
-  const categoryColors = {
-    "Quantum Computing": "bg-purple-100 text-purple-700",
-    "Artificial Intelligence": "bg-green-100 text-green-700",
-    "Blockchain": "bg-amber-100 text-amber-700",
-    "InsurTech": "bg-blue-100 text-blue-700"
-  };
+  // Filter opportunities based on active category
+  const filteredOpportunities = activeCategory === 'All' 
+    ? opportunities 
+    : opportunities.filter(job => job.category === activeCategory);
 
   return (
-    <section id='jobs' className="py-16 bg-gray-50">
+    <section id='career' className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -170,7 +181,7 @@ const FeaturedOpportunities = () => {
 
         {/* Opportunities Grid - Modern Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-          {opportunities.map((job, index) => (
+          {filteredOpportunities.map((job, index) => (
             <div
               key={job.id}
               className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-[#003366]/20"
@@ -207,10 +218,7 @@ const FeaturedOpportunities = () => {
                   </div>
                   
                   <div className="text-right">
-                    <div className={`px-3 py-1 rounded-full text-xs font-bold ${urgencyColors[job.urgency]} mb-2`}>
-                      {job.urgency} Urgency
-                    </div>
-                    <div className="flex items-center justify-end">
+                    <div className="flex items-center justify-end mb-2">
                       <Star className="w-4 h-4 text-[#FFC023] fill-[#FFC023] mr-1" />
                       <span className="font-bold text-gray-900">{job.rating}</span>
                       <span className="text-gray-400 ml-1">/5</span>

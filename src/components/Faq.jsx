@@ -1,144 +1,182 @@
 import React from 'react';
-import { Target, Users, Award, TrendingUp, CheckCircle, Star, MapPin, Clock, BarChart, Shield } from 'lucide-react';
+import { Target, Users, Award, TrendingUp, CheckCircle, Star, MapPin, Clock, BarChart, Shield, Cpu, Zap, Building, Globe, Layers, Briefcase } from 'lucide-react';
 
 const WhyChooseTANVRA = () => {
   const stats = [
-    { value: "18+", label: "Years Experience", icon: <Award className="w-5 h-5" /> },
-    { value: "1000+", label: "Tech Talents Placed", icon: <Users className="w-5 h-5" /> },
-    { value: "94%", label: "Success Rate", icon: <TrendingUp className="w-5 h-5" /> },
-    { value: "10+", label: "Tech Domains", icon: <Shield className="w-5 h-5" /> }
+    { 
+      value: "18+", 
+      label: "Years Experience", 
+      icon: <Award className="w-5 h-5" />,
+      description: "In global technology talent acquisition"
+    },
+    { 
+      value: "500+", 
+      label: "Tech Companies Served", 
+      icon: <Building className="w-5 h-5" />,
+      description: "From startups to Fortune 500 in India"
+    },
+    { 
+      value: "97%", 
+      label: "Client Satisfaction", 
+      icon: <TrendingUp className="w-5 h-5" />,
+      description: "Long-term partnerships with technology leaders"
+    },
+    { 
+      value: "5", 
+      label: "Specialized Domains", 
+      icon: <Layers className="w-5 h-5" />,
+      description: "InsurTech, AI, Cybersecurity, Blockchain, Quantum"
+    }
   ];
 
   const coreStrengths = [
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Technology Specialization",
-      description: "Deep expertise in emerging tech sectors including AI, Quantum Computing, and Blockchain",
-      points: ["Sector-specific recruiters", "Technical assessment expertise", "Market intelligence"]
+      title: "Domain-First Approach",
+      description: "Deep specialization in five high-growth technology sectors",
+      points: [
+        "InsurTech: PolicyTech, ClaimsTech, Underwriting AI",
+        "AI/ML: Computer Vision, NLP, Predictive Analytics",
+        "Cybersecurity: Cloud Security, Threat Intelligence",
+        "Blockchain: Smart Contracts, DeFi, Web3",
+        "Quantum Computing: Quantum Algorithms, Qubit Tech"
+      ]
     },
     {
-      icon: <BarChart className="w-6 h-6" />,
-      title: "Data-Driven Approach",
-      description: "Using analytics and market insights to optimize recruitment strategies",
-      points: ["Salary benchmarking", "Market trend analysis", "Competitive insights"]
+      icon: <Globe className="w-6 h-6" />,
+      title: "India-Focused Excellence",
+      description: "Extensive network across India's technology hubs",
+      points: [
+        "Deep understanding of Indian talent market",
+        "Strong presence in Bengaluru, Hyderabad, Pune, Delhi-NCR",
+        "Connections with premium engineering institutes",
+        "Local market salary intelligence"
+      ]
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Network Excellence",
-      description: "Extensive connections with technology companies and talent",
-      points: ["Quality placements", "Industry relationships", "Talent pipeline"]
+      icon: <Briefcase className="w-6 h-6" />,
+      title: "Strategic Talent Partnerships",
+      description: "Founder-led engagement for strategic hiring",
+      points: [
+        "Kishore personally leads key client relationships",
+        "C-suite advisory for talent strategy",
+        "Customized recruitment solutions",
+        "Scalable team building expertise"
+      ]
     }
   ];
 
   const processSteps = [
     {
       number: "01",
-      title: "Needs Assessment",
-      description: "Understanding your specific requirements and company culture"
+      title: "Domain Discovery",
+      description: "Deep dive into your specific technology stack and business goals"
     },
     {
       number: "02",
-      title: "Talent Sourcing",
-      description: "Leveraging our network to identify top candidates"
+      title: "Talent Mapping",
+      description: "Comprehensive analysis of available talent in your domain across India"
     },
     {
       number: "03",
-      title: "Technical Screening",
-      description: "Rigorous evaluation by domain experts"
+      title: "Technical Validation",
+      description: "Rigorous assessment by domain experts with industry experience"
     },
     {
       number: "04",
-      title: "Final Placement",
-      description: "Seamless onboarding and post-placement support"
+      title: "Strategic Onboarding",
+      description: "Ensuring smooth integration and long-term success"
     }
-  ];
-
-  const testimonials = [
-    {
-      role: "Technology Leader",
-      content: "Found our Lead AI Engineer within 2 weeks. Exceptional understanding of technical requirements.",
-      rating: 5
-    },
-    {
-      role: "Engineering Director",
-      content: "Their expertise in specialized hiring saved us months of recruitment efforts.",
-      rating: 5
-    }
-  ];
-
-  const techHubs = [
-    { city: "Tech Hub A", positions: "85+", companies: "Leading Companies" },
-    { city: "Tech Hub B", positions: "45+", companies: "Innovative Startups" },
-    { city: "Tech Hub C", positions: "60+", companies: "Enterprise Clients" },
-    { city: "Tech Hub D", positions: "35+", companies: "Growing Organizations" }
   ];
 
   return (
-    <section id='insights' className="py-16 bg-white">
+    <section id="why-choose-tanvra" className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-12 h-1 bg-gradient-to-r from-transparent to-[#003366]"></div>
-            <span className="text-sm font-semibold text-gray-600 uppercase tracking-wider">OUR ADVANTAGE</span>
+            <span className="text-sm font-semibold text-gray-600 uppercase tracking-wider">THE TANVRA ADVANTAGE</span>
             <div className="w-12 h-1 bg-gradient-to-r from-[#003366] to-transparent"></div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Partner With <span className="text-[#003366]">Our Expertise</span>
+            Why <span className="text-[#003366]">Choose Tanvra</span> for Your Tech Talent
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            18+ years of specialized technology recruitment experience delivering exceptional results
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+            18+ years of specialized experience in building technology teams for 
+            <span className="font-semibold text-[#003366]"> InsurTech, AI, Cybersecurity, Blockchain, and Quantum </span>
+            domains across India
           </p>
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="bg-[#003366] rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 shadow-lg"
+              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#003366] hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#FFC023] mb-3">
-                {React.cloneElement(stat.icon, { className: "w-6 h-6 text-[#003366]" })}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-[#003366] to-[#004080] group-hover:from-[#004080] group-hover:to-[#003366] transition-all">
+                  {React.cloneElement(stat.icon, { className: "w-6 h-6 text-white" })}
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-gray-900 group-hover:text-[#003366] transition-colors">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-gray-600">{stat.label}</div>
+                </div>
               </div>
-              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-300">{stat.label}</div>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {stat.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Core Strengths */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {coreStrengths.map((strength, index) => (
-            <div 
-              key={index}
-              className="group bg-white rounded-xl p-6 border border-gray-200 hover:border-[#003366] hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-[#003366] mb-6 group-hover:bg-[#003366]/90 transition-colors">
-                {React.cloneElement(strength.icon, { className: "w-7 h-7 text-white" })}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            Our <span className="text-[#003366]">Strategic Advantages</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {coreStrengths.map((strength, index) => (
+              <div 
+                key={index}
+                className="group relative bg-white rounded-xl p-6 border border-gray-200 hover:border-[#003366] hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden"
+              >
+                {/* Background accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#003366] via-[#FFC023] to-[#003366]"></div>
+                
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-[#003366] to-[#004080] mb-6 group-hover:scale-110 transition-transform duration-500">
+                  {React.cloneElement(strength.icon, { className: "w-7 h-7 text-white" })}
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#003366] transition-colors">
+                  {strength.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-5 leading-relaxed">
+                  {strength.description}
+                </p>
+                
+                <ul className="space-y-2">
+                  {strength.points.map((point, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-gray-700 group-hover:text-gray-800 transition-colors">
+                      <CheckCircle className="w-4 h-4 text-[#FFC023] mr-3 flex-shrink-0 mt-0.5" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#003366] transition-colors">
-                {strength.title}
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                {strength.description}
-              </p>
-              <ul className="space-y-2">
-                {strength.points.map((point, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-[#FFC023] mr-3 flex-shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Process Steps */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Our <span className="text-[#003366]">Recruitment Process</span>
+            Our <span className="text-[#003366]">4-Step</span> Recruitment Process
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Connecting Line */}
@@ -149,14 +187,14 @@ const WhyChooseTANVRA = () => {
                 key={index}
                 className="relative group"
               >
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#003366] hover:shadow-lg transition-all duration-500 text-center">
-                  <div className="w-16 h-16 rounded-full bg-[#003366] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4 group-hover:bg-[#003366]/90 group-hover:scale-110 transition-all">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#003366] hover:shadow-xl transition-all duration-500 text-center group-hover:-translate-y-2">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#003366] to-[#004080] text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
                     {step.number}
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#003366]">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -165,93 +203,56 @@ const WhyChooseTANVRA = () => {
           </div>
         </div>
 
-        {/* Testimonials */}
-        {/* <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Client <span className="text-[#003366]">Success Stories</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-[#003366] hover:shadow-lg transition-all duration-500"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#003366] flex items-center justify-center text-white font-bold text-lg">
-                    TL
-                  </div>
-                  <div className="ml-4">
-                    <div className="font-bold text-gray-900">Technology Leader</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}</div>
-                  </div>
-                  <div className="ml-auto flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className="w-4 h-4 text-[#FFC023] fill-[#FFC023] ml-1" 
-                      />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "{testimonial.content}"
-                </p>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        {/* Tech Hubs */}
-        <div className="bg-[#003366] rounded-2xl p-8 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Technology Network</h3>
-            <p className="text-gray-300">Connecting talent with opportunities across technology hubs</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {techHubs.map((hub, index) => (
-              <div key={index} className="bg-white/10 rounded-lg p-5 backdrop-blur-sm hover:bg-white/15 transition-colors">
-                <div className="flex items-center mb-3">
-                  <MapPin className="w-5 h-5 text-[#FFC023] mr-2" />
-                  <div className="font-bold text-white">{hub.city}</div>
-                </div>
-                <div className="text-2xl font-bold text-[#FFC023] mb-1">{hub.positions}</div>
-                <div className="text-sm text-gray-300">Active Positions</div>
-                <div className="text-xs text-gray-400 mt-2">{hub.companies}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Final CTA */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Team?</h3>
-            <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-              Connect with our expert recruiters to find the perfect technology talent for your organization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#003366]/90 hover:scale-105 transition-all duration-300">
-                Schedule Consultation
-              </button>
-              <button className="px-8 py-3 bg-white text-[#003366] font-semibold rounded-lg border border-[#003366] hover:bg-[#003366] hover:text-white hover:scale-105 transition-all duration-300">
-                Explore Services
-              </button>
-            </div>
-            <div className="mt-6 text-sm text-gray-500">
-              <div className="flex items-center justify-center gap-6">
-                <span className="flex items-center">
-                  <Clock className="w-4 h-4 mr-2 text-[#FFC023]" />
-                  Quick response
-                </span>
-                <span className="flex items-center">
-                  <Shield className="w-4 h-4 mr-2 text-[#FFC023]" />
-                  Confidential process
-                </span>
-                <span className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-2 text-[#FFC023]" />
-                  Guaranteed results
-                </span>
+          <div className="bg-gradient-to-br from-gray-900 to-[#003366] rounded-2xl p-10 border border-gray-800 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#FFC023]/10 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#FFC023]/10 to-transparent rounded-full translate-y-32 -translate-x-32"></div>
+            
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 mb-6">
+                <div className="w-8 h-1 bg-[#FFC023]"></div>
+                <span className="text-[#FFC023] text-sm font-semibold uppercase tracking-wider">Ready to Scale Your Team</span>
+                <div className="w-8 h-1 bg-[#FFC023]"></div>
+              </div>
+              
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Build Your Specialized Technology Team in India
+              </h3>
+              
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
+                Whether you need InsurTech experts, AI specialists, Cybersecurity professionals, 
+                Blockchain developers, or Quantum researchers - we have the network and expertise 
+                to find the right talent in India.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-[#FFC023] to-[#e6a900] text-gray-900 font-bold rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2">
+                  <Briefcase className="w-5 h-5" />
+                  Schedule Strategy Call
+                </button>
+                <button className="px-8 py-4 bg-transparent text-white font-bold rounded-lg border-2 border-white hover:bg-white hover:text-[#003366] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                  <Users className="w-5 h-5" />
+                  Discuss Your Hiring Needs
+                </button>
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+                  <div className="flex items-center justify-center">
+                    <Shield className="w-5 h-5 mr-2 text-[#FFC023]" />
+                    Founder-Led Engagement
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <Target className="w-5 h-5 mr-2 text-[#FFC023]" />
+                    Domain-Specific Expertise
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 mr-2 text-[#FFC023]" />
+                    India-Focused Network
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -15,32 +15,43 @@ const Hero = () => {
   const bannerItems = [
     {
       id: 1,
-      title: "QUANTUM COMPUTING",
-      subtitle: "Harnessing quantum mechanics to solve problems beyond classical computers",
-      image: "./images/banner1.jpg",
-      color: "#8B5CF6"
+      title: "INSURTECH",
+      subtitle: "Modern insurance solutions powered by cutting-edge technology",
+      image: "./images/banner12.jpg",
+      color: "#3B82F6"
     },
-    {
+      {
       id: 2,
       title: "ARTIFICIAL INTELLIGENCE",
       subtitle: "Intelligent systems transforming industries and enhancing human capabilities",
       image: "./images/banner77.jpg",
       color: "#10B981"
     },
-    {
+       {
       id: 3,
+      title: "CYBERSECURITY",
+      subtitle: "Protecting Your Business, Data, and Reputation",
+      image: "./images/banner5.jpg",
+      color: "#3B82F6"
+    },
+     {
+      id: 4,
       title: "BLOCKCHAIN",
       subtitle: "Decentralized systems building trust, transparency, and security",
       image: "./images/banner11.jpg",
       color: "#F59E0B"
     },
     {
-      id: 4,
-      title: "INSURTECH",
-      subtitle: "Modern insurance solutions powered by cutting-edge technology",
-      image: "./images/banner12.jpg",
-      color: "#3B82F6"
-    }
+      id: 5,
+      title: "QUANTUM COMPUTING",
+      subtitle: "Harnessing quantum mechanics to solve problems beyond classical computers",
+      image: "./images/banner1.jpg",
+      color: "#8B5CF6"
+    },
+  
+   
+    
+  
   ];
 
   // Number of vertical strips - use even number for symmetrical animation

@@ -8,7 +8,7 @@ import Pricing from './components/Pricing';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
 import About from "./components/About"
-import FAQ from './components/Faq';
+
 import Gallery from "./components/Gallery"
 import Contact from './components/Contact';
 
@@ -18,12 +18,12 @@ function App() {
       <Header />
       <Hero />
       <About/>
-      <Features />
+      {/* <Features /> */}
       <HowItWorks />
       {/* <Pricing /> */}
       {/* <Blog /> */}
       <Gallery/>
-      <FAQ/>
+      
       <Contact/>
       <Footer />
     </div>
