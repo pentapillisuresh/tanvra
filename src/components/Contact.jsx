@@ -71,7 +71,8 @@ const Contact = () => {
       email: "kishor@tanvra.in",
       phone: "+91-8309898737",
       linkedin: "https://www.linkedin.com/in/kishorpinninti/",
-      location: "Hyderabad, India"
+      location: "Hyderabad, India",
+      profileImage: "./images/ceo.jpg" // Add this image
     },
     {
       role: "Director",
@@ -79,7 +80,8 @@ const Contact = () => {
       email: "dipika@tanvra.in",
       phone: "+91-7032145690",
       linkedin: "https://www.linkedin.com/in/dipika-p-6508a737a/",
-      location: "Hyderabad, India"
+      location: "Hyderabad, India",
+      profileImage: "./images/director.jpg" // Add this image
     }
   ];
 
@@ -268,8 +270,17 @@ const Contact = () => {
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start gap-5">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#003366] to-[#004080] flex items-center justify-center text-white font-bold text-lg">
-                          {person.role.charAt(0)}
+                        {/* Profile Image Circle */}
+                        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md">
+                          <img 
+                            src={person.profileImage} 
+                            alt={person.role}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = `https://ui-avatars.com/api/?name=${person.role}&background=003366&color=fff&size=80`;
+                            }}
+                          />
                         </div>
                       </div>
                       

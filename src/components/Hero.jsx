@@ -12,47 +12,44 @@ const Hero = () => {
   const stripContainersRef = useRef([]);
   const contentRefs = useRef([]);
 
-  const bannerItems = [
-    {
-      id: 1,
-      title: "INSURTECH",
-      subtitle: "Modern insurance solutions powered by cutting-edge technology",
-      image: "./images/banner12.jpg",
-      color: "#3B82F6"
-    },
-      {
-      id: 2,
-      title: "ARTIFICIAL INTELLIGENCE",
-      subtitle: "Intelligent systems transforming industries and enhancing human capabilities",
-      image: "./images/banner77.jpg",
-      color: "#10B981"
-    },
-       {
-      id: 3,
-      title: "CYBERSECURITY",
-      subtitle: "Protecting Your Business, Data, and Reputation",
-      image: "./images/banner5.jpg",
-      color: "#3B82F6"
-    },
-     {
-      id: 4,
-      title: "BLOCKCHAIN",
-      subtitle: "Decentralized systems building trust, transparency, and security",
-      image: "./images/banner11.jpg",
-      color: "#F59E0B"
-    },
-    {
-      id: 5,
-      title: "QUANTUM COMPUTING",
-      subtitle: "Harnessing quantum mechanics to solve problems beyond classical computers",
-      image: "./images/banner1.jpg",
-      color: "#8B5CF6"
-    },
-  
-   
-    
-  
-  ];
+ const bannerItems = [
+  {
+    id: 1,
+    title: "APPLICATION STAGE",
+    subtitle: "Candidates have applied and are awaiting the interview process",
+    image: "./images/tanvra1.jpg",
+    color: "#3B82F6"
+  },
+  {
+    id: 2,
+    title: "INTERVIEW PROCESS",
+    subtitle: "Shortlisted candidates entering the interview and assessment stage",
+    image: "./images/tanvra2.jpg",
+    color: "#10B981"
+  },
+  {
+    id: 3,
+    title: "CANDIDATE EVALUATION",
+    subtitle: "Reviewing resumes, skills, and role suitability",
+    image: "./images/tanvra3.jpg",
+    color: "#3B82F6"
+  },
+  {
+    id: 4,
+    title: "SELECTION & OFFER",
+    subtitle: "Finalized candidates receive confirmation and offer details",
+    image: "./images/tanvra4.jpg",
+    color: "#F59E0B"
+  },
+  {
+    id: 5,
+    title: "EMPLOYEE ONBOARDING",
+    subtitle: "Seamless onboarding to integrate new hires into the organization",
+    image: "./images/tanvra5.jpg",
+    color: "#8B5CF6"
+  }
+];
+
 
   // Number of vertical strips - use even number for symmetrical animation
   const STRIP_COUNT = 16;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapPin, Briefcase, DollarSign, Clock, ChevronRight, Star, Users, Building, Award, TrendingUp, Zap } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Features from './Features'
 
 const FeaturedOpportunities = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -118,7 +119,9 @@ const FeaturedOpportunities = () => {
 
   return (
     <section id='career' className="py-16 bg-gray-50">
+      <Features/>
       <div className="container mx-auto px-6 max-w-7xl">
+       
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6">
@@ -295,33 +298,7 @@ const FeaturedOpportunities = () => {
           ))}
         </div>
 
-        {/* Additional Opportunities */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">More Opportunities in India</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { role: "Data Scientist", company: "Tech Solutions", location: "Chennai", salary: "₹18L+" },
-              { role: "Cloud Architect", company: "Digital Services", location: "Pune", salary: "₹25L+" },
-              { role: "Security Engineer", company: "CyberTech", location: "Remote", salary: "₹20L+" }
-            ].map((job, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-lg p-5 border border-gray-200 hover:border-[#FFC023] hover:shadow-lg transition-all duration-300 group"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-bold text-gray-900 group-hover:text-[#003366]">{job.role}</h4>
-                  <div className="text-lg font-bold text-[#FFC023]">{job.salary}</div>
-                </div>
-                <div className="text-sm text-gray-600 mb-3">{job.company} • {job.location}</div>
-                <button className="w-full py-2 text-[#003366] font-medium text-sm hover:bg-[#003366] hover:text-white rounded-lg transition-colors">
-                  View Details →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
+      
 
         {/* CTA Section */}
         <div 
